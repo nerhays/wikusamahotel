@@ -41,8 +41,8 @@
 							<h4 class="card-title">Login</h4>
 							<form action="login_aksi.php" method="POST" class="my-login-validation" novalidate="" >
 								<div class="form-group">
-									<label for="email">E-Mail Address</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+									<label for="username">username</label>
+									<input id="username" type="username" class="form-control" name="username" value="" required autofocus>
 									<div class="invalid-feedback">
 										Email is invalid
 									</div>

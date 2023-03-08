@@ -21,7 +21,7 @@
         <large><b><?php echo $_SESSION['setting_hotel_name']; ?></b></large>
       </div>
 	  	<div class="col-md-2 float-right text-white">
-	  		<a href="ajax.php?action=logout" class="text-white"><?php echo $_SESSION['login_name'] ?> <i class="fa fa-power-off"></i></a>
+	  		<a href="ajax.php?action=logout" class="text-white"><?php echo $_SESSION['username'] ?> <i class="fa fa-power-off"></i></a>
 	    </div>
     </div>
   </div>

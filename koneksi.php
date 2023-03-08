@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$db = "wikusama";
+$db = "hotel_db";
 $uname = "root";
 $pass = "";
 
