@@ -20,7 +20,7 @@ if($cek > 0){
         $_SESSION['status'] = "login";
 		$_SESSION['role'] = 3;
 
-		header("location:resepsionis");
+		header("location:admin");
 	}else if($data['role']== 2){
 
 		$_SESSION['username'] = $username;

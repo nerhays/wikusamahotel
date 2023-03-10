@@ -27,7 +27,6 @@ foreach($user->fetch_array() as $k =>$v){
 			<label for="role">User Type</label>
 			<select name="role" id="role" class="custom-select">
 				<option value="1" <?php echo isset($meta['role']) && $meta['role'] == 1 ? 'selected': '' ?>>Admin</option>
-				<option value="2" <?php echo isset($meta['role']) && $meta['role'] == 2 ? 'selected': '' ?>>User</option>
 				<option value="3" <?php echo isset($meta['role']) && $meta['role'] == 3 ? 'selected': '' ?>>Resepsionis</option>
 			</select>
 		</div>
@@ -43,10 +42,11 @@ foreach($user->fetch_array() as $k =>$v){
 			data:$(this).serialize(),
 			success:function(resp){
 				if(resp ==1){
-					alert_toast("Data successfully saved",'success')
+					alert("Data successfully saved",'success')
 					setTimeout(function(){
 						location.reload()
 					},15)
+					
 				}
 			}
 		})

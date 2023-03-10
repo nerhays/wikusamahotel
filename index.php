@@ -38,7 +38,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">Booked</a></li>
                         <li class="nav-item">
                         <?php
-                    if (isset($_SESSION['email'])) {  
+                    if (isset($_SESSION['username'])) {  
                       echo '<form action="logout.php" method="POST">
                             <button type="submit" name="submit">Logout</button>
                         </form>';

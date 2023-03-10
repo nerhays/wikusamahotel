@@ -42,7 +42,7 @@ Class Action {
 		extract($_POST);
 		$data .= " name = '$name' ";
 		$data .= ", username = '$username' ";
-		$data .= ", password = '$password' ";
+		$data .= ", password = md5('$password') ";
 		$data .= ", role = '$role' ";
 		if(empty($id)){
 			$save = $this->db->query("INSERT INTO users set ".$data);
