@@ -22,7 +22,7 @@ Class Action {
 				if($key != 'passwors' && !is_numeric($key))
 					$_SESSION['login_'.$key] = $value;
 			}
-			if($_SESSION['login_type'] == 1)
+			if($_SESSION['role'] == 1)
 				return 1;
 			else
 				return 2;
@@ -40,10 +40,10 @@ Class Action {
 
 	function save_user(){
 		extract($_POST);
-		$data = " name = '$name' ";
+		$data .= " name = '$name' ";
 		$data .= ", username = '$username' ";
 		$data .= ", password = '$password' ";
-		$data .= ", type = '$type' ";
+		$data .= ", role = '$role' ";
 		if(empty($id)){
 			$save = $this->db->query("INSERT INTO users set ".$data);
 		}else{

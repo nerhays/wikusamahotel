@@ -7,25 +7,25 @@ $result = mysqli_query($koneksi,"select * from users where username='$username' 
 $cek = mysqli_num_rows($result);
 if($cek > 0){
 	$data = mysqli_fetch_assoc($result);
-	if($data['role']=="admin"){
+	if($data['role']== 1){
  
 		$_SESSION['username'] = $username;
         $_SESSION['status'] = "login";
-		$_SESSION['role'] = "admin";
+		$_SESSION['role'] = 1;
 		header("location:admin");
  
-	}else if($data['role']=="resepsionis"){
+	}else if($data['role']== 3){
 
 		$_SESSION['username'] = $username;
         $_SESSION['status'] = "login";
-		$_SESSION['role'] = "resepsionis";
+		$_SESSION['role'] = 3;
 
 		header("location:resepsionis");
-	}else if($data['role']=="tamu"){
+	}else if($data['role']== 2){
 
 		$_SESSION['username'] = $username;
         $_SESSION['status'] = "login";
-		$_SESSION['role'] = "tamu";
+		$_SESSION['role'] = 2;
 
 		header("location:index.php");
 	}else{

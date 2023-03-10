@@ -24,10 +24,11 @@ foreach($user->fetch_array() as $k =>$v){
 			<input type="password" name="password" id="password" class="form-control" value="<?php echo isset($meta['password']) ? $meta['id']: '' ?>" required>
 		</div>
 		<div class="form-group">
-			<label for="type">User Type</label>
-			<select name="type" id="type" class="custom-select">
-				<option value="1" <?php echo isset($meta['type']) && $meta['type'] == 1 ? 'selected': '' ?>>Admin</option>
-				<option value="2" <?php echo isset($meta['type']) && $meta['type'] == 2 ? 'selected': '' ?>>User</option>
+			<label for="role">User Type</label>
+			<select name="role" id="role" class="custom-select">
+				<option value="1" <?php echo isset($meta['role']) && $meta['role'] == 1 ? 'selected': '' ?>>Admin</option>
+				<option value="2" <?php echo isset($meta['role']) && $meta['role'] == 2 ? 'selected': '' ?>>User</option>
+				<option value="3" <?php echo isset($meta['role']) && $meta['role'] == 3 ? 'selected': '' ?>>Resepsionis</option>
 			</select>
 		</div>
 	</form>
@@ -45,7 +46,7 @@ foreach($user->fetch_array() as $k =>$v){
 					alert_toast("Data successfully saved",'success')
 					setTimeout(function(){
 						location.reload()
-					},1500)
+					},15)
 				}
 			}
 		})
