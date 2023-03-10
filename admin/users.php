@@ -72,7 +72,7 @@ $('.edit_user').click(function(){
 	uni_modal('Edit User','manage_user.php?id='+$(this).attr('data-id'))
 })
 $('.delete_user').click(function(){
-	uni_modal('Delete User','manage_user.php?id='+$(this).attr('data-id'))
+	uni_modal('Delete User','manage_user.php?id='+$(this).attr('data-id'),'delete_user.php')
 })
 
 </script>

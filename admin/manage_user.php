@@ -35,7 +35,7 @@ foreach($user->fetch_array() as $k =>$v){
 <script>
 	$('#manage-user').submit(function(e){
 		e.preventDefault();
-		start_load()
+		//start_load()
 		$.ajax({
 			url:'ajax.php?action=save_user',
 			method:'POST',
@@ -45,7 +45,7 @@ foreach($user->fetch_array() as $k =>$v){
 					alert("Data successfully saved",'success')
 					setTimeout(function(){
 						location.reload()
-					},15)
+					},1s)
 					
 				}
 			}
