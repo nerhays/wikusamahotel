@@ -37,17 +37,8 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">Booked</a></li>
                         <li class="nav-item">
-                        <?php
-                    if (isset($_SESSION['username'])) {  
-                      echo '<form action="logout.php" method="POST">
-                            <button type="submit" name="submit">Logout</button>
-                        </form>';
-                    } else {
-                      echo '<form action="login.php" method="POST">
-                      <button type="submit" name="submit">Login</button>
-                      </form>';
-                    }
-?>
+                        <li class="nav-item"><a class=" btn btn-primary btn-lg nav-link js-scroll-trigger" href="login.php">Sign-In</a></li>
+
 
                     </ul>
                     

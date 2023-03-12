@@ -42,10 +42,10 @@ foreach($user->fetch_array() as $k =>$v){
 			data:$(this).serialize(),
 			success:function(resp){
 				if(resp ==1){
-					alert("Data successfully saved",'success')
+					alert_toast("Data successfully saved",'success')
 					setTimeout(function(){
-						location.reload()
-					},15)
+						end_load()
+					},1500)
 					
 				}
 			}

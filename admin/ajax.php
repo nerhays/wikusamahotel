@@ -19,6 +19,11 @@ if($action == 'save_user'){
 	if($save)
 		echo $save;
 }
+if($action == "delete_user"){
+	$save = $crud->delete_user();
+	if($save)
+		echo $save;
+}
 if($action == "save_settings"){
 	$save = $crud->save_settings();
 	if($save)
