@@ -19,6 +19,7 @@
 					<th class="text-center">#</th>
 					<th class="text-center">Name</th>
 					<th class="text-center">Username</th>
+					<th class="text-center">Role</th>
 					<th class="text-center">Action</th>
 				</tr>
 			</thead>
@@ -38,6 +39,9 @@
 				 	</td>
 				 	<td>
 				 		<?php echo $row['username'] ?>
+				 	</td>
+					 <td>
+				 		<?php echo $row['role'] ?>
 				 	</td>
 				 	<td>
 				 		<center>

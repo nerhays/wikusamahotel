@@ -35,7 +35,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list">Rooms</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">Booked</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=booked">Booked</a></li>
                         <li class="nav-item">
                         <li class="nav-item"><a class=" btn btn-primary btn-lg nav-link js-scroll-trigger" href="login.php">Sign-In</a></li>
 

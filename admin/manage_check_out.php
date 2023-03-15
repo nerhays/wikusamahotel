@@ -45,7 +45,7 @@ if($_GET['id']){
 					<button type="button" class="btn btn-primary" id="checkout">Checkout</button>
 				</div>
 				<div class="col-md-3">
-					<button type="button" class="btn btn-primary" id="edit_checkin">Edit</button>
+					<button type="button" class="btn btn-primary" id="edit_checkin">CheckIn</button>
 				</div>
 		<?php endif; ?>	
 				<div class="col-md-3">

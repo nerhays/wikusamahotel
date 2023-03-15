@@ -41,10 +41,10 @@ foreach($user->fetch_array() as $k =>$v){
 			method:'POST',
 			data:$(this).serialize(),
 			success:function(resp){
-				if(resp ==1){
+				if(resp==1){
 					alert_toast("Data successfully saved",'success')
 					setTimeout(function(){
-						end_load()
+						location.reload()
 					},1500)
 					
 				}

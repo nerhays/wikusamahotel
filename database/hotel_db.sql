@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Mar 2023 pada 10.29
+-- Waktu pembuatan: 15 Mar 2023 pada 01.21
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 7.4.21
 
@@ -48,7 +48,11 @@ INSERT INTO `checked` (`id`, `ref_no`, `room_id`, `name`, `contact_no`, `date_in
 (4, '0000\n', 1, 'John Smith', '+14526-5455-44', '2020-09-19 11:48:09', '2020-09-22 11:48:09', 0, 2, '2020-09-19 13:11:34'),
 (10, '6479004224\n', 1, 'John Smith', '+14526-5455-44', '2020-09-23 10:31:00', '2020-09-29 10:31:00', 3, 2, '2023-02-23 09:05:47'),
 (12, '5431982682\n', 3, 'maultaq', '999', '2023-03-10 05:10:00', '2023-03-11 05:10:00', 0, 2, '2023-03-10 11:10:46'),
-(13, '2217404362\n', 0, 'maul', '888', '2023-03-10 07:00:00', '2023-03-11 07:00:00', 3, 0, '2023-03-10 14:58:53');
+(13, '8499876320\n', 1, 'kibo', '888', '2023-03-10 07:00:00', '2023-03-11 07:00:00', 3, 2, '2023-03-14 22:44:32'),
+(14, '4794536086\n', 1, 'maula', '1111', '2023-03-14 12:43:00', '2023-03-17 12:43:00', 2, 2, '2023-03-14 22:53:24'),
+(15, '6598290565\n', 3, 'Biru', '081', '2023-03-15 08:00:00', '2023-03-18 08:00:00', 0, 2, '2023-03-14 22:54:10'),
+(16, '484417181\n', 0, 'kibo', '809', '2023-03-13 18:00:00', '2023-03-17 18:00:00', 3, 0, '2023-03-14 23:01:15'),
+(17, '6339794469\n', 0, 'maul', '8090', '2023-03-17 17:01:00', '2023-03-17 17:01:00', 6, 0, '2023-03-14 23:01:42');
 
 -- --------------------------------------------------------
 
@@ -138,8 +142,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `role`) VALUES
 (38, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', '1'),
-(40, 'resepsionis', 'resepsionis', '3aeff485f68b360d076de3d73f9247ad', '3'),
-(43, 'admiiin', 'admiiin', 'e86eb3868e5cb0e27f4822d1b30213e1', '1');
+(40, 'resepsionis', 'resepsionis', '3aeff485f68b360d076de3d73f9247ad', '3');
 
 --
 -- Indexes for dumped tables
@@ -183,12 +186,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `checked`
 --
 ALTER TABLE `checked`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `rooms`
 --
 ALTER TABLE `rooms`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `room_categories`
+--
 ALTER TABLE `room_categories`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
@@ -202,7 +210,7 @@ ALTER TABLE `system_settings`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
