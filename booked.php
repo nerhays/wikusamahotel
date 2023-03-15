@@ -35,15 +35,14 @@ while($row = $room->fetch_assoc()){
                                 <th>Name</th>
 								<th>Category</th>
 								<th>Reference</th>
-								<th>Check In</th>
-								<th>Check Out</th>
 								<th>Status</th>
+								<th>Action</th>
 								
 							</thead>
 							<tbody>
 								<?php 
 								$i = 1;
-								$checked = $conn->query("SELECT * FROM checked where status = 0 order by status desc, id asc");
+								$checked = $koneksi->query("SELECT * FROM checked where status = 0 order by status desc, id asc");
 								while($row=$checked->fetch_assoc()):
 								?>
 								<tr>
@@ -51,10 +50,8 @@ while($row = $room->fetch_assoc()){
                                     <td class=""><?php echo $row['name'] ?></td>
 									<td class="text-center"><?php echo $cat_arr[$row['booked_cid']]['name'] ?></td>
 									<td class=""><?php echo $row['ref_no'] ?></td>
-									<td class=""><?php echo $row['date_in'] ?></td>
-									<td class=""><?php echo $row['date_out'] ?></td>
 									<td class="text-center"><span class="badge badge-warning">Booked</span></td>	
-																	
+									<td class="text-center"><a href="booked_cetak.php?id=<?php echo $row['id']; ?>" target="_blank" class="btn btn-sm btn-primary">Invoice</a></td>				
 								</tr>
 							<?php endwhile; ?>
 							</tbody>
